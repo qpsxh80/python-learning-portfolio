@@ -107,6 +107,29 @@
     </div>
   </section>
 
+  <section class="case" aria-labelledby="case-5-title">
+    <h2 id="case-5-title">사례 5 · 잘못된 입력을 try/except로 처리하기</h2>
+
+    <div class="star">
+      <div class="star-item">
+        <h3>Situation</h3>
+        <p>리스트와 반복문으로 여러 값을 처리하는 법을 배운 뒤, 숫자가 아닌 값이나 칸이 모자란 줄처럼 잘못된 입력을 안전하게 처리하는 방법을 배우고 있었다.</p>
+      </div>
+      <div class="star-item">
+        <h3>Task</h3>
+        <p><code>int("abc")</code>처럼 숫자로 바꿀 수 없는 값에서 프로그램이 멈추지 않게 하고, <code>sample_logs_broken.csv</code>에서 칸이 모자란 깨진 줄을 건너뛰면서 정상 줄만 처리하려 했다.</p>
+      </div>
+      <div class="star-item">
+        <h3>Action</h3>
+        <p><code>assignment_05_f1.py</code>에서 <code>try/except ValueError</code>로 <code>int("abc")</code>를 감싸 "숫자가 아닙니다"를 출력하고 "확인 끝"까지 이어지게 했다. <code>assignment_05_f2.py</code>에서는 반복문 안에서 <code>try/except ValueError</code>로 숫자가 아닌 값을 건너뛰고 합계를 계산했다. 선택 문제 R3~R7과 도전 문제에서 <code>sample_logs_broken.csv</code>를 읽어 <code>except IndexError</code>로 깨진 줄을 건너뛰고, <code>split</code>을 두 번 써서 시(hour)를 꺼내 0~6시면 "야간"을 출력하고, 깨진 줄을 리스트에 모았다. 결과를 <code>docs/2026-11-02.md</code>에 기록하고 GitHub에 커밋·푸시했다.</p>
+      </div>
+      <div class="star-item">
+        <h3>Result</h3>
+        <p><code>f1</code>은 "숫자가 아닙니다", "확인 끝"이 출력됐다. <code>f2</code>는 "건너뜀 bad", "합계 5"가 출력됐다. R3는 깨진 줄에서 멈추지 않고 정상 줄의 계정·IP만 출력됐고, R6은 <code>3</code>, R7은 "야간"이 출력됐다. <code>try/except</code>가 없으면 <code>ValueError</code>·<code>IndexError</code>에서 프로그램이 멈춘다는 것을 R5에서 직접 확인했다.</p>
+      </div>
+    </div>
+  </section>
+
   <section class="links" aria-labelledby="links-title">
     <h2 id="links-title">실습 저장소</h2>
     <p>
