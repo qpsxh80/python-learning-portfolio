@@ -17,116 +17,61 @@
 
   <section class="case" aria-labelledby="case-1-title">
     <h2 id="case-1-title">사례 1 · 변수 값을 바꿔 출력 비교하기</h2>
-
     <div class="star">
-      <div class="star-item">
-        <h3>Situation</h3>
-        <p>Python Chapter 1에서 변수에 값을 저장하고 출력하는 법을 배우고 있었다.</p>
-      </div>
-      <div class="star-item">
-        <h3>Task</h3>
-        <p>변수 <code>x</code>의 값만 바꿔도 같은 계산식의 결과가 달라지는지 확인하려 했다.</p>
-      </div>
-      <div class="star-item">
-        <h3>Action</h3>
-        <p><code>x = 3</code>으로 정하고 <code>print(x + 2)</code>를 실행했다. AI에게 대입과 출력의 차이를 물은 뒤, <code>x = 8</code>로 바꾸고 파일 전체를 다시 실행했다.</p>
-      </div>
-      <div class="star-item">
-        <h3>Result</h3>
-        <p>출력이 <code>5</code>에서 <code>10</code>으로 바뀌었다. 첫 줄의 값을 바꾸면 뒤의 계산에 그 값이 쓰인다는 것을 확인했다.</p>
-      </div>
+      <div class="star-item"><h3>Situation</h3><p>Python Chapter 1에서 변수에 값을 저장하고 출력하는 법을 배우고 있었다.</p></div>
+      <div class="star-item"><h3>Task</h3><p>변수 <code>x</code>의 값만 바꿔도 같은 계산식의 결과가 달라지는지 확인하려 했다.</p></div>
+      <div class="star-item"><h3>Action</h3><p><code>x = 3</code>으로 정하고 <code>print(x + 2)</code>를 실행했다. AI에게 대입과 출력의 차이를 물은 뒤, <code>x = 8</code>로 바꾸고 파일 전체를 다시 실행했다.</p></div>
+      <div class="star-item"><h3>Result</h3><p>출력이 <code>5</code>에서 <code>10</code>으로 바뀌었다. 첫 줄의 값을 바꾸면 뒤의 계산에 그 값이 쓰인다는 것을 확인했다.</p></div>
     </div>
   </section>
 
   <section class="case" aria-labelledby="case-2-title">
     <h2 id="case-2-title">사례 2 · 조건문으로 값에 따라 다른 결과 출력하기</h2>
-
     <div class="star">
-      <div class="star-item">
-        <h3>Situation</h3>
-        <p>VS Code에서 Python 실습 환경을 준비하고, 조건문(if/elif/else)으로 값에 따라 다른 결과를 출력하는 과제를 받았다.</p>
-      </div>
-      <div class="star-item">
-        <h3>Task</h3>
-        <p><code>result</code> 값이 <code>FAIL</code>일 때만 "확인 필요"가 출력되고, <code>count</code>가 3 이상일 때 "추가 확인"이 출력되는지 확인하려 했다.</p>
-      </div>
-      <div class="star-item">
-        <h3>Action</h3>
-        <p><code>agent_core</code> 폴더에 <code>assignment_02_f1.py</code>와 <code>assignment_02_f2.py</code>를 만들어 <code>if</code>/<code>else</code>로 조건을 작성했다. 값을 <code>FAIL</code>/<code>SUCCESS</code>, <code>2</code>/<code>3</code>으로 바꿔가며 실행했고, 결과를 <code>docs/2026-10-30.md</code>에 기록한 뒤 GitHub에 커밋·푸시했다.</p>
-      </div>
-      <div class="star-item">
-        <h3>Result</h3>
-        <p><code>f1</code>은 <code>FAIL</code>일 때 "확인 필요", <code>SUCCESS</code>일 때 "계속 진행"이 출력됐다. <code>f2</code>는 <code>2</code>일 때 "기록 유지", <code>3</code>일 때 "추가 확인"이 출력됐다. 경계값(<code>&gt;= 3</code>에서 3)을 직접 바꿔 조건이 참/거짓으로 갈리는 지점을 확인했다.</p>
-      </div>
+      <div class="star-item"><h3>Situation</h3><p>VS Code에서 Python 실습 환경을 준비하고, 조건문(if/elif/else)으로 값에 따라 다른 결과를 출력하는 과제를 받았다.</p></div>
+      <div class="star-item"><h3>Task</h3><p><code>result</code> 값이 <code>FAIL</code>일 때만 "확인 필요"가 출력되고, <code>count</code>가 3 이상일 때 "추가 확인"이 출력되는지 확인하려 했다.</p></div>
+      <div class="star-item"><h3>Action</h3><p><code>agent_core</code> 폴더에 <code>assignment_02_f1.py</code>와 <code>assignment_02_f2.py</code>를 만들어 <code>if</code>/<code>else</code>로 조건을 작성했다. 값을 <code>FAIL</code>/<code>SUCCESS</code>, <code>2</code>/<code>3</code>으로 바꿔가며 실행했고, 결과를 <code>docs/2026-10-30.md</code>에 기록한 뒤 GitHub에 커밋·푸시했다.</p></div>
+      <div class="star-item"><h3>Result</h3><p><code>f1</code>은 <code>FAIL</code>일 때 "확인 필요", <code>SUCCESS</code>일 때 "계속 진행"이 출력됐다. <code>f2</code>는 <code>2</code>일 때 "기록 유지", <code>3</code>일 때 "추가 확인"이 출력됐다. 경계값(<code>&gt;= 3</code>에서 3)을 직접 바꿔 조건이 참/거짓으로 갈리는 지점을 확인했다.</p></div>
     </div>
   </section>
 
   <section class="case" aria-labelledby="case-3-title">
     <h2 id="case-3-title">사례 3 · 리스트와 반복문으로 여러 값 처리하기</h2>
-
     <div class="star">
-      <div class="star-item">
-        <h3>Situation</h3>
-        <p>조건문으로 한 건을 판단하는 법을 배운 뒤, 여러 값을 한 번에 처리하는 방법을 배우고 있었다.</p>
-      </div>
-      <div class="star-item">
-        <h3>Task</h3>
-        <p>계정 목록을 반복문으로 하나씩 출력하고, <code>range(1, 4)</code>가 1부터 3까지만 만드는지 확인하려 했다.</p>
-      </div>
-      <div class="star-item">
-        <h3>Action</h3>
-        <p><code>agent_core</code> 폴더에 <code>assignment_03_f1.py</code>와 <code>assignment_03_f2.py</code>를 만들어 <code>for</code> 반복문과 <code>range()</code>를 작성했다. <code>users</code>에 <code>"choi04"</code>를 추가해 다시 실행했고, <code>range(1, 4)</code>의 출력도 확인했다. 결과를 <code>docs/2026-10-30.md</code>에 기록하고 GitHub에 커밋·푸시했다.</p>
-      </div>
-      <div class="star-item">
-        <h3>Result</h3>
-        <p><code>f1</code>은 <code>kim01</code>, <code>lee02</code>, <code>park03</code>이 한 줄씩 출력됐고, <code>choi04</code>를 추가하자 한 줄이 더 출력됐다. <code>f2</code>는 <code>1</code>, <code>2</code>, <code>3</code>이 출력됐고, 끝값 <code>4</code>는 포함되지 않아 출력되지 않았다.</p>
-      </div>
+      <div class="star-item"><h3>Situation</h3><p>조건문으로 한 건을 판단하는 법을 배운 뒤, 여러 값을 한 번에 처리하는 방법을 배우고 있었다.</p></div>
+      <div class="star-item"><h3>Task</h3><p>계정 목록을 반복문으로 하나씩 출력하고, <code>range(1, 4)</code>가 1부터 3까지만 만드는지 확인하려 했다.</p></div>
+      <div class="star-item"><h3>Action</h3><p><code>agent_core</code> 폴더에 <code>assignment_03_f1.py</code>와 <code>assignment_03_f2.py</code>를 만들어 <code>for</code> 반복문과 <code>range()</code>를 작성했다. <code>users</code>에 <code>"choi04"</code>를 추가해 다시 실행했고, <code>range(1, 4)</code>의 출력도 확인했다. 결과를 <code>docs/2026-10-30.md</code>에 기록하고 GitHub에 커밋·푸시했다.</p></div>
+      <div class="star-item"><h3>Result</h3><p><code>f1</code>은 <code>kim01</code>, <code>lee02</code>, <code>park03</code>이 한 줄씩 출력됐고, <code>choi04</code>를 추가하자 한 줄이 더 출력됐다. <code>f2</code>는 <code>1</code>, <code>2</code>, <code>3</code>이 출력됐고, 끝값 <code>4</code>는 포함되지 않아 출력되지 않았다.</p></div>
     </div>
   </section>
 
   <section class="case" aria-labelledby="case-4-title">
     <h2 id="case-4-title">사례 4 · 조건에 맞는 값의 개수와 합계 구하기</h2>
-
     <div class="star">
-      <div class="star-item">
-        <h3>Situation</h3>
-        <p>리스트와 반복문으로 여러 값을 출력하는 법을 배운 뒤, 조건에 맞는 값만 골라 개수와 합계를 구하는 과제를 받았다.</p>
-      </div>
-      <div class="star-item">
-        <h3>Task</h3>
-        <p><code>counts = [0, 4, 2, 5]</code>에서 3 이상인 값만 출력하고, 그 값들의 개수(2)와 합계(9)를 따로 계산하려 했다.</p>
-      </div>
-      <div class="star-item">
-        <h3>Action</h3>
-        <p><code>assignment_04_f1.py</code>에서 <code>for</code> 반복문 안에 <code>if count &gt;= 3:</code> 조건을 넣어 3 이상인 값만 출력했다. <code>assignment_04_f2.py</code>에서는 <code>selected</code>, <code>total</code>을 반복문 <strong>위에서</strong> 0으로 초기화하고, 조건에 맞는 값마다 <code>selected += 1</code>, <code>total += count</code>로 누적했다. 결과를 <code>docs/2026-11-02.md</code>에 기록하고 GitHub에 커밋·푸시했다.</p>
-      </div>
-      <div class="star-item">
-        <h3>Result</h3>
-        <p><code>f1</code>은 <code>4</code>, <code>5</code>가 출력됐다. <code>f2</code>는 <code>2 9</code>가 출력됐다. 개수와 합계를 모을 변수를 반복문 안에서 만들면 매번 0으로 초기화된다는 것을 확인하고, 위에서 한 번만 초기화해야 한다는 점을 배웠다.</p>
-      </div>
+      <div class="star-item"><h3>Situation</h3><p>리스트와 반복문으로 여러 값을 출력하는 법을 배운 뒤, 조건에 맞는 값만 골라 개수와 합계를 구하는 과제를 받았다.</p></div>
+      <div class="star-item"><h3>Task</h3><p><code>counts = [0, 4, 2, 5]</code>에서 3 이상인 값만 출력하고, 그 값들의 개수(2)와 합계(9)를 따로 계산하려 했다.</p></div>
+      <div class="star-item"><h3>Action</h3><p><code>assignment_04_f1.py</code>에서 <code>for</code> 반복문 안에 <code>if count &gt;= 3:</code> 조건을 넣어 3 이상인 값만 출력했다. <code>assignment_04_f2.py</code>에서는 <code>selected</code>, <code>total</code>을 반복문 <strong>위에서</strong> 0으로 초기화하고, 조건에 맞는 값마다 <code>selected += 1</code>, <code>total += count</code>로 누적했다. 결과를 <code>docs/2026-11-02.md</code>에 기록하고 GitHub에 커밋·푸시했다.</p></div>
+      <div class="star-item"><h3>Result</h3><p><code>f1</code>은 <code>4</code>, <code>5</code>가 출력됐다. <code>f2</code>는 <code>2 9</code>가 출력됐다. 개수와 합계를 모을 변수를 반복문 안에서 만들면 매번 0으로 초기화된다는 것을 확인하고, 위에서 한 번만 초기화해야 한다는 점을 배웠다.</p></div>
     </div>
   </section>
 
   <section class="case" aria-labelledby="case-5-title">
     <h2 id="case-5-title">사례 5 · 잘못된 입력을 try/except로 처리하기</h2>
-
     <div class="star">
-      <div class="star-item">
-        <h3>Situation</h3>
-        <p>리스트와 반복문으로 여러 값을 처리하는 법을 배운 뒤, 숫자가 아닌 값이나 칸이 모자란 줄처럼 잘못된 입력을 안전하게 처리하는 방법을 배우고 있었다.</p>
-      </div>
-      <div class="star-item">
-        <h3>Task</h3>
-        <p><code>int("abc")</code>처럼 숫자로 바꿀 수 없는 값에서 프로그램이 멈추지 않게 하고, <code>sample_logs_broken.csv</code>에서 칸이 모자란 깨진 줄을 건너뛰면서 정상 줄만 처리하려 했다.</p>
-      </div>
-      <div class="star-item">
-        <h3>Action</h3>
-        <p><code>assignment_05_f1.py</code>에서 <code>try/except ValueError</code>로 <code>int("abc")</code>를 감싸 "숫자가 아닙니다"를 출력하고 "확인 끝"까지 이어지게 했다. <code>assignment_05_f2.py</code>에서는 반복문 안에서 <code>try/except ValueError</code>로 숫자가 아닌 값을 건너뛰고 합계를 계산했다. 선택 문제 R3~R7과 도전 문제에서 <code>sample_logs_broken.csv</code>를 읽어 <code>except IndexError</code>로 깨진 줄을 건너뛰고, <code>split</code>을 두 번 써서 시(hour)를 꺼내 0~6시면 "야간"을 출력하고, 깨진 줄을 리스트에 모았다. 결과를 <code>docs/2026-11-02.md</code>에 기록하고 GitHub에 커밋·푸시했다.</p>
-      </div>
-      <div class="star-item">
-        <h3>Result</h3>
-        <p><code>f1</code>은 "숫자가 아닙니다", "확인 끝"이 출력됐다. <code>f2</code>는 "건너뜀 bad", "합계 5"가 출력됐다. R3는 깨진 줄에서 멈추지 않고 정상 줄의 계정·IP만 출력됐고, R6은 <code>3</code>, R7은 "야간"이 출력됐다. <code>try/except</code>가 없으면 <code>ValueError</code>·<code>IndexError</code>에서 프로그램이 멈춘다는 것을 R5에서 직접 확인했다.</p>
-      </div>
+      <div class="star-item"><h3>Situation</h3><p>리스트와 반복문으로 여러 값을 처리하는 법을 배운 뒤, 숫자가 아닌 값이나 칸이 모자란 줄처럼 잘못된 입력을 안전하게 처리하는 방법을 배우고 있었다.</p></div>
+      <div class="star-item"><h3>Task</h3><p><code>int("abc")</code>처럼 숫자로 바꿀 수 없는 값에서 프로그램이 멈추지 않게 하고, <code>sample_logs_broken.csv</code>에서 칸이 모자란 깨진 줄을 건너뛰면서 정상 줄만 처리하려 했다.</p></div>
+      <div class="star-item"><h3>Action</h3><p><code>assignment_05_f1.py</code>에서 <code>try/except ValueError</code>로 <code>int("abc")</code>를 감싸 "숫자가 아닙니다"를 출력하고 "확인 끝"까지 이어지게 했다. <code>assignment_05_f2.py</code>에서는 반복문 안에서 <code>try/except ValueError</code>로 숫자가 아닌 값을 건너뛰고 합계를 계산했다. 선택 문제 R3~R7과 도전 문제에서 <code>sample_logs_broken.csv</code>를 읽어 <code>except IndexError</code>로 깨진 줄을 건너뛰고, <code>split</code>을 두 번 써서 시(hour)를 꺼내 0~6시면 "야간"을 출력하고, 깨진 줄을 리스트에 모았다. 결과를 <code>docs/2026-11-02.md</code>에 기록하고 GitHub에 커밋·푸시했다.</p></div>
+      <div class="star-item"><h3>Result</h3><p><code>f1</code>은 "숫자가 아닙니다", "확인 끝"이 출력됐다. <code>f2</code>는 "건너뜀 bad", "합계 5"가 출력됐다. R3는 깨진 줄에서 멈추지 않고 정상 줄의 계정·IP만 출력됐고, R6은 <code>3</code>, R7은 "야간"이 출력됐다. <code>try/except</code>가 없으면 <code>ValueError</code>·<code>IndexError</code>에서 프로그램이 멈춘다는 것을 R5에서 직접 확인했다.</p></div>
+    </div>
+  </section>
+
+  <section class="case" aria-labelledby="case-6-title">
+    <h2 id="case-6-title">사례 6 · 파일에 결과를 쓰고 읽기</h2>
+    <div class="star">
+      <div class="star-item"><h3>Situation</h3><p>리스트와 반복문, <code>try/except</code>로 잘못된 입력을 처리하는 법을 배운 뒤, 코드 밖의 파일에서 로그를 읽고 결과를 파일로 남기는 방법을 배우고 있었다.</p></div>
+      <div class="star-item"><h3>Task</h3><p><code>check.txt</code>에 "점검 시작"과 "점검 끝"을 서로 다른 줄에 쓰고 다시 읽어 확인하고, 없는 파일 <code>not-provided.txt</code>를 열 때 나는 <code>FileNotFoundError</code>를 처리하려 했다.</p></div>
+      <div class="star-item"><h3>Action</h3><p><code>assignment_06_f1.py</code>에서 <code>open("check.txt", "w", encoding="utf-8")</code>로 파일을 열어 <code>write()</code>로 두 줄을 썼고, 다시 읽기 모드로 열어 <code>read()</code>로 출력했다. <code>assignment_06_f2.py</code>에서는 <code>try/except FileNotFoundError</code>로 없는 파일을 열 때 "파일 위치를 확인하세요"를 출력하게 했다. 선택 문제 R1~R5에서 <code>"w"</code>/<code>"a"</code> 모드 차이, <code>strip()</code>으로 줄바꿈 제거, <code>"FAIL" in line</code>으로 특정 줄만 고르기를 연습했다. 결과를 <code>docs/2026-11-03.md</code>에 기록하고 GitHub에 커밋·푸시했다.</p></div>
+      <div class="star-item"><h3>Result</h3><p><code>f1</code>은 "점검 시작", "점검 끝"이 출력됐다. <code>f2</code>는 "파일 위치를 확인하세요"가 출력됐다. R3은 로그 6줄과 "총 6줄"이, R4는 FAIL이 든 4줄이, R5는 "점검 시작", "점검 끝", "추가 점검"이 출력됐다. <code>"w"</code>는 덮어쓰고 <code>"a"</code>는 덧붙인다는 것, <code>print</code>가 이미 줄을 바꾸므로 파일 줄은 <code>strip()</code>으로 <code>\n</code>을 지워야 한다는 것을 확인했다.</p></div>
     </div>
   </section>
 
