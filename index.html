@@ -95,6 +95,16 @@
     </div>
   </section>
 
+  <section class="case" aria-labelledby="case-9-title">
+    <h2 id="case-9-title">사례 9 · 딕셔너리와 JSON으로 데이터 저장하기</h2>
+    <div class="star">
+      <div class="star-item"><h3>Situation</h3><p>중첩 자료구조와 중첩 반복문을 배운 뒤, 이름으로 값을 꺼내는 딕셔너리와 프로그램끼리 데이터를 주고받는 JSON 형식을 배우고 있었다.</p></div>
+      <div class="star-item"><h3>Task</h3><p>딕셔너리에서 키로 값을 꺼내고, 리스트를 <code>logs.json</code> 파일로 저장한 뒤 다시 읽어 복원하며, 한글이 깨지지 않고 보기 좋게 저장하려 했다.</p></div>
+      <div class="star-item"><h3>Action</h3><p><code>assignment_08_f1.py</code>에서 <code>log["user"]</code>, <code>log["count"]</code>로 값을 꺼냈다. <code>assignment_08_f2.py</code>에서는 <code>json.dump(logs, f, ensure_ascii=False, indent=2)</code>로 저장하고 <code>json.load(f)</code>로 복원했다. 선택 문제에서 <code>logs[1]["user"]</code>, <code>report["admin"]["fail"]</code>, <code>alerts[0]["tags"][1]</code>로 중첩 값을 꺼냈고, <code>.get("ip", "-")</code>로 없는 키를 안전하게 처리했으며, <code>json.dumps(log, ensure_ascii=False)</code>와 <code>indent=2</code>로 한글 유지와 줄 나눔을 확인했다. 도전 6-8에서 <code>logs.json</code>을 읽어 <code>LOGIN_FAIL</code> 4건을 셌다. 결과를 <code>docs/2026-11-05.md</code>에 기록하고 GitHub에 커밋·푸시했다.</p></div>
+      <div class="star-item"><h3>Result</h3><p><code>f1</code>은 <code>kim01 4</code>, <code>f2</code>는 <code>kim01</code>이 출력됐다. R15와 도전 6-8은 "실패 4건"이, R11은 <code>3</code>이 출력됐다. R8에서는 한글이 <code>\u...</code>로 깨졌고, R9에서 <code>ensure_ascii=False</code>로 한글이 그대로 나오는 것을 확인했다. 없는 키에 대괄호를 쓰면 <code>KeyError</code>로 멈추고, <code>.get()</code>은 <code>None</code>이나 기본값을 돌려준다는 것을 확인했다.</p></div>
+    </div>
+  </section>
+
   <section class="links" aria-labelledby="links-title">
     <h2 id="links-title">실습 저장소</h2>
     <p>
