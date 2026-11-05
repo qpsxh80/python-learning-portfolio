@@ -105,6 +105,16 @@
     </div>
   </section>
 
+  <section class="case" aria-labelledby="case-10-title">
+    <h2 id="case-10-title">사례 10 · 보안 분석 도구 설치 및 Git 활용</h2>
+    <div class="star">
+      <div class="star-item"><h3>Situation</h3><p>Python 기초 문법과 Git 사용법을 익힌 뒤, 실제 보안 관제 및 네트워크 분석 실습을 위한 도구(Wireshark)와 새로운 과목 폴더(<code>network_zt</code>)를 준비해야 했다.</p></div>
+      <div class="star-item"><h3>Task</h3><p>패킷 캡처 도구인 Wireshark를 설치하고, 과목별 폴더 구조를 만들며, 터미널의 <code>|</code>(파이프) 기능과 <code>git add .</code>을 사용해 변경된 파일을 한 번에 GitHub에 올리는 방법을 확인하려 했다.</p></div>
+      <div class="star-item"><h3>Action</h3><p>Wireshark 공식 사이트에서 Windows x64 Installer를 받아 Npcap을 포함해 설치했다. VS Code에서 <code>security-agent-toolkit</code> 하위에 <code>network_zt</code> 폴더를 만들고 터미널을 열었다. <code>tasklist | grep Code</code>를 실행해 파이프가 앞 명령의 결과를 뒤 명령으로 넘기는 것을 확인했다. <code>.gitignore</code>에 <code>.ipynb_checkpoints</code>와 <code>__pycache__</code>를 추가한 뒤, <code>git status</code>로 <code>.env</code>·<code>.venv</code>가 없는 것을 확인하고 <code>git add .</code> → <code>git commit</code> → <code>git push</code>로 GitHub에 올렸다. 결과를 <code>docs/2026-11-05.md</code>에 기록했다.</p></div>
+      <div class="star-item"><h3>Result</h3><p>Wireshark 화면에서 인터페이스 목록과 움직이는 그래프를 확인했다. <code>tasklist | grep Code</code>로 VS Code 프로세스 줄만 필터링되는 것을 확인했다. <code>git add .</code>을 사용하면 <code>.gitignore</code>에 명시된 파일은 제외하고 한 번에 스테이징되며, <code>git status</code>로 초록색(<code>Changes to be committed</code>)으로 바뀌는 것을 확인한 뒤 성공적으로 GitHub에 푸시했다.</p></div>
+    </div>
+  </section>
+
   <section class="links" aria-labelledby="links-title">
     <h2 id="links-title">실습 저장소</h2>
     <p>
