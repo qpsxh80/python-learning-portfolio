@@ -125,6 +125,26 @@
     </div>
   </section>
 
+  <section class="case" aria-labelledby="case-12-title">
+    <h2 id="case-12-title">사례 12 · grep으로 로그에서 필요한 줄만 골라내기</h2>
+    <div class="star">
+      <div class="star-item"><h3>Situation</h3><p>네트워크 및 보안 관제 실습을 위해 <code>network_zt</code> 폴더를 만든 뒤, 수많은 로그 파일 중에서 특정 상황(실패, 에러 등)이 발생한 줄만 빠르게 찾아내야 했다.</p></div>
+      <div class="star-item"><h3>Task</h3><p><code>sample.log</code> 파일을 만들고, <code>cat</code>으로 전체를 확인한 뒤, <code>grep</code>과 옵션(<code>-n</code>, <code>-c</code>)을 사용해 원하는 줄의 내용, 위치, 개수를 파악하려 했다.</p></div>
+      <div class="star-item"><h3>Action</h3><p><code>network_zt</code> 폴더에 6줄짜리 <code>sample.log</code>를 작성하고, <code>cat sample.log</code>로 전체를 읽었다. <code>grep "실패"</code>로 실패 줄을 찾고, <code>grep -n "끊김"</code>으로 줄 번호(<code>4:</code>)를 확인했으며, <code>grep -c "실패"</code>로 일치하는 줄 수(<code>2</code>)를 셌다. 확인한 옵션의 의미를 <code>docs/2026-11-05.md</code>에 기록하고 GitHub에 커밋·푸시했다.</p></div>
+      <div class="star-item"><h3>Result</h3><p><code>grep "실패"</code>는 2줄을, <code>grep -n "끊김"</code>은 <code>4:09:12 와이파이 끊김</code>을, <code>grep -c "실패"</code>는 <code>2</code>를 출력했다. <code>-c</code> 옵션은 글자가 나온 횟수가 아니라 <strong>일치한 줄 수</strong>를 센다는 것을 확인했다.</p></div>
+    </div>
+  </section>
+
+  <section class="case" aria-labelledby="case-13-title">
+    <h2 id="case-13-title">사례 13 · 함수 기본값과 파일 저장</h2>
+    <div class="star">
+      <div class="star-item"><h3>Situation</h3><p>함수의 기본 개념을 배운 뒤, 매개변수에 기본값을 주는 법과 함수가 반환한 결과를 파일로 저장하는 법을 배우고 있었다.</p></div>
+      <div class="star-item"><h3>Task</h3><p>3 이상인 값만 골라 새 리스트로 반환하는 함수를 만들고, 합계를 문장으로 반환해 <code>report.txt</code>에 저장하며, 계정별 실패 횟수를 세어 기준 이상인 계정만 출력하려 했다.</p></div>
+      <div class="star-item"><h3>Action</h3><p><code>assignment_10_f1.py</code>에서 빈 리스트 <code>result</code>에 조건에 맞는 값을 <code>append</code>하고 <code>return</code>했다. <code>assignment_10_f2.py</code>에서는 <code>summarize</code> 함수로 <code>f"합계 {total}"</code>을 반환한 뒤 <code>open("report.txt", "w")</code>로 파일에 저장했다. 선택 문제 R1에서 <code>show_level(user, level="주의")</code>로 기본값을, R2에서 <code>Counter</code>와 <code>threshold=2</code>로 기준 이상 계정을 출력했고, R3에서 <code>sample_logs.csv</code>를 읽어 <code>"FAIL" in line</code>으로 FAIL 줄만 출력하고 <code>count = count + 1</code>로 개수를 셌다. 결과를 <code>docs/2026-11-05.md</code>에 기록하고 GitHub에 커밋·푸시했다.</p></div>
+      <div class="star-item"><h3>Result</h3><p><code>f1</code>은 <code>[4, 5]</code>, 빈 리스트는 <code>[]</code>가 반환됐다. <code>f2</code>는 <code>합계 5</code>가 출력되고 <code>report.txt</code>에도 저장됐다. R1은 <code>kim01 주의</code>, <code>park03 높음</code>, R2는 <code>확인 필요: kim01 · 3회</code>, R3는 FAIL 4줄과 <code>실패 4줄</code>이 출력됐다. 기본값이 있는 매개변수는 <strong>뒤쪽</strong>에 둬야 하고, <code>count = 0</code>은 반복문 위에, 최종 출력은 반복문 밖에 둬야 한다는 것을 확인했다.</p></div>
+    </div>
+  </section>
+
   <section class="links" aria-labelledby="links-title">
     <h2 id="links-title">실습 저장소</h2>
     <p>
