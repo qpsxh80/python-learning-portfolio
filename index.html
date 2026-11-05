@@ -115,6 +115,16 @@
     </div>
   </section>
 
+  <section class="case" aria-labelledby="case-11-title">
+    <h2 id="case-11-title">사례 11 · 함수 정의와 반환값 활용하기</h2>
+    <div class="star">
+      <div class="star-item"><h3>Situation</h3><p>딕셔너리와 JSON으로 데이터를 다루는 법을 배운 뒤, 반복되는 코드를 묶어 재사용할 수 있는 함수(def)의 개념을 배우고 있었다.</p></div>
+      <div class="star-item"><h3>Task</h3><p>이름을 받아 인사말을 반환하는 <code>greet</code> 함수를 만들어 두 번 호출하고, 실패 횟수에 따라 다른 메시지를 반환하는 <code>judge</code> 함수로 경계값(2와 3)을 확인하려 했다.</p></div>
+      <div class="star-item"><h3>Action</h3><p><code>assignment_09_f1.py</code>에서 <code>def greet(name):</code>으로 함수를 정의하고 <code>return f"안녕하세요 {name}"</code>으로 값을 돌려준 뒤, <code>print(greet("기찬"))</code>과 <code>print(greet("정민"))</code>으로 두 번 호출했다. <code>assignment_09_f2.py</code>에서는 <code>if fail_count &gt;= 3:</code> 조건을 가진 <code>judge</code> 함수를 만들어 <code>print(judge(2))</code>, <code>print(judge(3))</code>으로 경계값을 테스트했다. 선택 문제 R1~R4에서 매개변수가 없는 함수, 값을 받는 함수, True/False를 반환하는 함수, 리스트를 모아 반환하는 함수를 작성했다. 결과를 <code>docs/2026-11-05.md</code>에 기록하고 GitHub에 커밋·푸시했다.</p></div>
+      <div class="star-item"><h3>Result</h3><p><code>f1</code>은 "안녕하세요 기찬", "안녕하세요 정민"이 출력됐다. <code>f2</code>는 2일 때 "기록 유지", 3일 때 "추가 확인"이 출력되어 경계값에서 결과가 달라지는 것을 확인했다. R4에서는 <code>['kim01', 'park03']</code>가 출력됐다. <code>print</code>는 화면에 보여주기만 하고, <code>return</code>은 값을 돌려주어 다음 계산에 쓸 수 있다는 차이를 확인했다.</p></div>
+    </div>
+  </section>
+
   <section class="links" aria-labelledby="links-title">
     <h2 id="links-title">실습 저장소</h2>
     <p>
