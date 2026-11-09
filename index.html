@@ -155,6 +155,16 @@
     </div>
   </section>
 
+  <section class="case" aria-labelledby="case-15-title">
+    <h2 id="case-15-title">사례 15 · CSV와 JSON으로 보고서 만들기</h2>
+    <div class="star">
+      <div class="star-item"><h3>Situation</h3><p>함수와 파일 입출력을 배운 뒤, 실제 보안 로그처럼 칸 이름(헤더)이 붙은 표(CSV)와 구조화된 데이터(JSON)를 읽어 의미 있는 보고서를 만드는 방법을 배우고 있었다.</p></div>
+      <div class="star-item"><h3>Task</h3><p>CSV 파일(<code>gichan_input.csv</code>)에서 <code>FAIL</code> 건수를 세고, JSON 파일(<code>gichan_input.json</code>)을 읽어 전체·실패 건수를 <code>summary.txt</code>에 저장하며, 칸 순서가 바뀌어도 코드를 고치지 않는 방법(<code>DictReader</code>)을 확인하려 했다.</p></div>
+      <div class="star-item"><h3>Action</h3><p><code>assignment_11_f1.py</code>에서 <code>csv.DictReader(f)</code>로 파일을 읽고 <code>row["result"] == "FAIL"</code>일 때 카운트를 늘렸다. <code>assignment_11_f2.py</code>에서는 <code>json.load(f)</code>로 리스트를 복원하고 <code>len(logs)</code>로 전체 건수를, 반복문으로 실패 건수를 구해 <code>summary.txt</code>에 저장했다. 선택 문제 R1~R4에서 <code>csv.reader</code>로 줄 수 세기, <code>DictReader</code>로 실패 계정 모으기, PEP8에 맞게 이름 고치기(<code>THRESHOLD</code>, <code>failed_users</code>, <code>count_fail</code>), <code>Counter</code>로 계정별 횟수 세어 <code>day2_csv_report.py</code>에 저장하는 것을 연습했다. 결과를 <code>docs/2026-11-09.md</code>에 기록하고 GitHub에 커밋·푸시했다.</p></div>
+      <div class="star-item"><h3>Result</h3><p><code>f1</code>은 <code>2</code>, <code>f2</code>는 <code>전체 3건, 실패 2건</code>이 출력되고 <code>summary.txt</code>에도 저장됐다. R1은 7줄과 <code>총 7줄</code>, R2는 <code>['kim01', 'kim01', 'kim01', 'park03']</code>, R3는 <code>확인 필요: kim01</code>, R4는 <code>확인 필요: kim01 · 3회</code>가 출력됐다. <code>DictReader</code>는 헤더를 이름표로 쓰기 때문에 <strong>칸 순서가 바뀌어도 코드를 고칠 필요가 없다</strong>는 것을 확인했다.</p></div>
+    </div>
+  </section>
+
   <section class="links" aria-labelledby="links-title">
     <h2 id="links-title">실습 저장소</h2>
     <p>
