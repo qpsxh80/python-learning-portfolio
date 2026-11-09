@@ -145,6 +145,16 @@
     </div>
   </section>
 
+  <section class="case" aria-labelledby="case-14-title">
+    <h2 id="case-14-title">사례 14 · 터미널 명령어로 파일 다루기</h2>
+    <div class="star">
+      <div class="star-item"><h3>Situation</h3><p>Git과 터미널 사용법을 익힌 뒤, 서버 환경처럼 마우스(GUI)가 없는 곳에서 파일을 생성, 복사, 이동, 삭제하는 방법을 배우고 있었다.</p></div>
+      <div class="star-item"><h3>Task</h3><p>연습용 폴더(<code>mvcp_practice</code>)를 만들어 <code>touch</code>, <code>cp</code>, <code>mv</code>, <code>rm</code> 명령어로 파일을 다루고, 옵션(<code>-r</code>, <code>-i</code>)의 쓰임새를 확인한 뒤 GitHub 커밋 기록에서 변경 사항(<code>-</code>, <code>+</code>)을 확인하려 했다.</p></div>
+      <div class="star-item"><h3>Action</h3><p>저장소 바깥에 <code>mvcp_practice</code> 폴더를 만들고 <code>a.log</code>, <code>memo.txt</code>를 생성했다. <code>cp a.log b.log</code>로 복사하고, <code>mv b.log c.log</code>로 이름을 바꾼 뒤 <code>mv c.log backup/</code>으로 폴더에 옮겼다. <code>cp -r backup backup2</code>로 폴더째 복사하고, <code>cp -i</code>로 덮어쓰기 전 묻는 것을 확인했으며, <code>cat</code>으로 내용을 확인한 뒤 <code>rm</code>과 <code>rm -r</code>로 파일과 폴더를 삭제했다. 결과를 <code>docs/2026-11-09.md</code>에 기록하고 커밋·푸시한 뒤, GitHub 커밋 화면에서 빨간 줄(삭제)과 초록 줄(추가)을 확인했다.</p></div>
+      <div class="star-item"><h3>Result</h3><p><code>touch</code>로 빈 파일이 생성되고 <code>rm</code>으로 삭제됐다. <code>cp</code>로 파일이 복사되고 <code>mv</code>로 이름 변경과 이동이 모두 가능하다는 것을 확인했다. <code>cp -r</code>과 <code>rm -r</code> 옵션으로 폴더를 통째로 다룰 수 있었고, <code>cp -i</code>는 덮어쓰기 전에 물어봤다. GitHub 커밋 화면에서 첫 줄 수정이 빨강(-)과 초록(+)으로 표시되는 것을 확인했다.</p></div>
+    </div>
+  </section>
+
   <section class="links" aria-labelledby="links-title">
     <h2 id="links-title">실습 저장소</h2>
     <p>
